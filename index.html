@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="multiply.css">
+</head>
+<body>
+  <!-- Элемент, в который будем вливать таблицу -->
+  <div id="wrap-multiply"></div>
+ 
+  <!-- Элемент, в который будем вливать таблицу -->
+  <div class="table-multiply"></div>
+ 
+  <!-- Элемент, в который будем вливать таблицу -->
+  <div class="table"></div>
+  
+  <script src=" https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js"></script>
+
+  <script src="multiply.js"></script>
+  <script>
+    // вызов виджета
+    var multiply = new Multiply({ 
+        // элемент, в который будет вливаться виджет
+        elem: document.querySelector('#wrap-multiply'),
+        count: 3,
+        title: 'Считаем до трех',
+        captionAlign: 'text-left',
+        captionColor: '#38C864',
+      });
+
+     // вызов виджета
+    var multiply2 = new Multiply({ 
+        // элемент, в который будет вливаться виджет
+        elem: document.querySelector('.table-multiply'),
+        captionSize: '2em',
+      });
+
+
+     // вызов виджета
+    var multiply3 = new Multiply({ 
+        // элемент, в который будет вливаться виджет
+        elem: document.querySelector('.table'),
+        count:5,
+        title:'О! До пяти',
+        captionAlign: 'text-right',
+        captionColor: 'red',
+      });
+
+  </script>
+</body>
+</html>
